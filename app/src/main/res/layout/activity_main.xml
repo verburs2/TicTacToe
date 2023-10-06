@@ -28,4 +28,9 @@
         <Button style="@style/LightButton" />
         <Button style="@style/LightButton" />
     </GridLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
