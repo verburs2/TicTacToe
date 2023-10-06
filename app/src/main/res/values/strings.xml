@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TicTakToe</string>
+    <string name="warning" />
+    <string name="warning_message" />
+    <string name="appbar_quit">Quit</string>
+    <string name="appbar_new_game">New Game</string>
+</resources>
