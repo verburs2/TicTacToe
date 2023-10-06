@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // inflates appbar
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.appbar_menu, menu);
@@ -36,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+
+    // When appbar menu is selected, this will attach an action
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item){
         if(item.getItemId() == R.id.action_new){
