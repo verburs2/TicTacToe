@@ -87,6 +87,29 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "button 9 clicked", Toast.LENGTH_SHORT).show();
             }
         }
+        Button gridButton = (Button) view;
+
+        if (gridButton.getText().toString().isEmpty()) {
+            // Button is not already marked
+            gridButton.setText(String.valueOf(currentPlayer));
+
+            // Set vector asset as the background of the button based on player
+            int vectorDrawableId = (currentPlayer == 'X') ? R.drawable.baseline_done_24: R.drawable.baseline_circle_24;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                gridButton.setBackground(getDrawable(vectorDrawableId));
+            } else {
+                gridButton.setBackground(getResources().getDrawable(vectorDrawableId));
+            }
+
+
+
+            currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
+
+        } else {
+            Toast.makeText(this, "Cell already occupied. Choose another cell.", Toast.LENGTH_SHORT).show();
+        }
+
+    }
 
     }
 
