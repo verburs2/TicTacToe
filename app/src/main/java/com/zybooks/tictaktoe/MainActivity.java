@@ -47,10 +47,12 @@ public class MainActivity extends AppCompatActivity {
         ptrTurn = ptrTurn + 1;
         if ((ptrTurn % 2) == 0){
             player.setText("X's Turn");
+            currentPlayer = 'X';
         }
         else
         {
             player.setText("O's Turn");
+            currentPlayer = 'O';
         }
 
         // checks which button was presses and sends message
@@ -110,6 +112,19 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+    private void resetGrid() {
+        // Clear text and background for all buttons in the grid
+        for (int i = 0; i < gameBoard.getChildCount(); i++) {
+            Button gridButton = (Button) gameBoard.getChildAt(i);
+            gridButton.setText("");
+            gridButton.setBackgroundResource(android.R.drawable.btn_default);
+        }
+
+        // Reset turn counter and player indicator
+        ptrTurn = 0;
+        currentPlayer = 'X';
+        player.setText("X's Turn");
+    }
 
     }
 
@@ -127,6 +142,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item){
         if(item.getItemId() == R.id.action_new){
             Log.d("onOptionItemSelected", "Activity!");
+            resetGrid();
             return true;
         }
         else if(item.getItemId() == R.id.action_quit){
