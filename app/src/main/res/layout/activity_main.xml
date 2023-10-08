@@ -7,30 +7,47 @@
     tools:context="com.zybooks.tictaktoe.MainActivity">
 
     <GridLayout
-        android:id="@+id/light_grid"
+        android:id="@+id/main_grid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:useDefaultMargins="true"
         android:layout_marginTop="100dp"
         android:columnCount="3"
         android:rowCount="3"
+        android:useDefaultMargins="true"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <Button style="@style/LightButton" />
+
         <Button style="@style/LightButton" />
+
         <Button style="@style/LightButton" />
+
         <Button style="@style/LightButton" />
+
         <Button style="@style/LightButton" />
+
         <Button style="@style/LightButton" />
+
         <Button style="@style/LightButton" />
+
         <Button style="@style/LightButton" />
+
         <Button style="@style/LightButton" />
+
     </GridLayout>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+    <TextView
+        android:id="@+id/textViewPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="69dp"
+        android:layout_marginBottom="225dp"
+        android:text="@string/player_turn"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
